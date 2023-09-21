@@ -60,6 +60,19 @@ class CategoryCard extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
+          ClipRRect(
+              borderRadius: BorderRadius.circular(10.0), // Adjust corner radius
+              child: LinearProgressIndicator(
+                value: product.progress / 100.0,
+                backgroundColor: Colors.grey[300], // Background color
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue), // Indicator color
+                minHeight: 10, // Adjust the height of the progress bar
+                semanticsLabel: '${product.progress}% progress', // Accessibility label
+                semanticsValue: '${product.progress}', // Accessibility value
+              ),
+            ),
+
+         
           ],
         ),
       ),
